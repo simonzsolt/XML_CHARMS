@@ -1,0 +1,82 @@
+<TEI version="5.0" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader type='text'>
+        <profileDesc>
+            <laguageUsage>
+                <language id='primary'>Hungarian</language> <!-- id='hu/hun'?? -->
+                <language id='secondary'>Latin</language> <!-- id='lat'?? -->
+            </laguageUsage>
+        </profileDesc>
+        <settingDesc>
+            <time>16th century</time>
+        </settingDesc>
+        <encodingDesc>
+            <p>
+                Description of the metric pattern: this incantation is loosly
+                based on the recurring stressed syllable pairs per line.
+            </p>
+            <metDecl xml:id='stressQuant' type='met'>
+                <pattern>(SU*\b\s|\S*){2,4}</pattern> 
+                    <!-- 
+                        Regex: 
+                            1.  One stressed syllabe followed by any number of
+                                unstressed syllables.
+                            2.  Word boundry.
+                            3.  White sapce or any number of non white space
+                                because of the last element in the last line.
+                            4.  This is captured and searched in groups of 2, or
+                                4 because of the first line's double pattern.
+                    -->
+                <metSym value="S">stressed syllable</metSym>
+                <metSym value="U">unstressed syllable</metSym>
+            </metDecl>
+        </encodingDesc>
+    </teiHeader>
+
+    <text>
+        <body>
+            <head>Contra Tharghÿ Equor(um)</head> <!-- type='title'?? -->
+        </body>
+        <lg type='instruction'>
+            <l>dicant(ur) hec v(er)ba tri(bus) vicib(us) ſi(mi)l(ite)r</l>
+            <l>terc c(um) police c(ir)cu(m)eu(n)do ipsu(m) tharghÿ</l>
+        </lg>
+
+        <lg decls='stressQuant' type='tale'>
+            <l>Erdőn jár vala lebeke tárgy.</l>
+            <l>Béka vala ekéje,</l>
+            <l>Kígyó vala ostora.</l>
+            <l>Szánt vala kevet,</l>
+            <l>Vet vala kevecset.</l>
+        </lg>
+
+        <lg type='command'>
+            <l>Parancsolok én teneked:</l>
+        </lg>
+
+        <lg type='analogy'> <!-- type='aim' -->
+            <l>hogy miképpen a kő nem gyekerezhethik, és nem levelezhethik,</l>
+            <l>azonképpen te itt a lovon ne gyekererezhessél, és erekedhessél.</l>
+        </lg>
+    </text>
+</TEI>
+
+<!-- 
+    ======================================================================================================================== 
+
+    Contra Tharghÿ Equor(um)
+    (Cím)
+    dicant(ur) hec v(er)ba tri(bus) vicib(us) ſi(mi)l(ite)r 
+    terc c(um) police c(ir)cu(m)eu(n)do ipsu(m) tharghÿ
+    (Használati utasítás)
+    Erdőn jár vala lebeke tárgy.
+    Béka vala ekéje,
+    Kígyó vala ostora.
+    Szánt vala kevet,
+    Vet vala kevecset. 
+    (Epikus keret)
+    Parancsolok én teneked:
+    (Parancs)
+    hogy miképpen a kő nem gyekerezhethik, és nem levelezhethik,
+    azonképpen te itt a lovon ne gyekererezhessél, és erekedhessél.
+    (Analógia, cél) 
+-->
