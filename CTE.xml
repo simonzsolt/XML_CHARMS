@@ -2,8 +2,8 @@
     <teiHeader type='text'>
         <profileDesc>
             <laguageUsage>
-                <language id='primary'>Hungarian</language> <!-- id='hu/hun'?? -->
-                <language id='secondary'>Latin</language> <!-- id='lat'?? -->
+                <language ident='hu' usage='65'>Hungarian</language> 
+                <language ident='la-Hu' usage='35'>Latin as used in Hungary</language> 
             </laguageUsage>
         </profileDesc>
         <settingDesc>
@@ -15,9 +15,9 @@
                 based on the recurring stressed syllable pairs per line.
             </p>
             <metDecl xml:id='stressQuant' type='met'>
-                <pattern>(SU*\b\s|\S*){2,4}</pattern> 
+                <pattern><ex>SU*\b\s|\S*){2,4}</pattern> 
                     <!-- 
-                        Regex: 
+                        Regex explained: 
                             1.  One stressed syllabe followed by any number of
                                 unstressed syllables.
                             2.  Word boundry.
@@ -34,14 +34,33 @@
 
     <text>
         <body>
-            <head>Contra Tharghÿ Equor(um)</head> <!-- type='title'?? -->
+            <head>
+                <msDesc>
+                    <msIdentifier>
+                        <country key='HU'>Hungary<country>
+                        <institution>National Széchényi Library</institution>
+                        <idno>Mny. 20</idno>
+                        <idno type='URI'>http://nyelvemlekek.oszk.hu/sites/nyelvemlekek.oszk.hu/files/mny20_b.pdf</idno>
+                    </msIdentifier>
+
+                    <msContents>
+                        <textLang mainLang='la' otherLangs='hu'>Predominantly in Latin with Hungarian glosses</textLang>
+                        <msItem>
+                            <title mainLang='la-Hu' otherLangs='hu'>Contra Tharghÿ Equor<ex>um</ex></title>
+                        </msItem>
+                        <summary>
+                            This text is writen among other notes, in the inside of the cover of a Colligatum containing The Golden Ass from Apuleius with the commentaries of Filippo Beroaldo, and the works of Sallustius with the commentaries of Ioannes Badius Ascensius. The first few pages contain numerous notes from various hands and dates, and were removed from the volume and are stored together under the catalog id Mny. 20.
+                        </summary>
+                    </msContents>
+                </msDesc>
+            </head> 
         </body>
-        <lg type='instruction'>
-            <l>dicant(ur) hec v(er)ba tri(bus) vicib(us) ſi(mi)l(ite)r</l>
-            <l>terc c(um) police c(ir)cu(m)eu(n)do ipsu(m) tharghÿ</l>
+        <lg type='instruction' xml:lang='la-Hu'>
+            <l>dicant<ex>ur</ex> hec v<ex>er</ex>ba tri<ex>bus</ex> vicib<ex>us</ex> ſi<ex>mi</ex>l<ex>ite</ex>r</l>
+            <l>terc c<ex>um</ex> police c<ex>ir</ex>cu<ex>m</ex>eu<ex>n</ex>do ipsu<ex>m</ex> tharghÿ</l>
         </lg>
 
-        <lg decls='stressQuant' type='tale'>
+        <lg decls='stressQuant' type='tale' xml:lang='hu'>
             <l>Erdőn jár vala lebeke tárgy.</l>
             <l>Béka vala ekéje,</l>
             <l>Kígyó vala ostora.</l>
@@ -49,11 +68,11 @@
             <l>Vet vala kevecset.</l>
         </lg>
 
-        <lg type='command'>
+        <lg type='command' xml:lang='hu'>
             <l>Parancsolok én teneked:</l>
         </lg>
 
-        <lg type='analogy'> <!-- type='aim' -->
+        <lg type='analogy' xml:lang='hu'>
             <l>hogy miképpen a kő nem gyekerezhethik, és nem levelezhethik,</l>
             <l>azonképpen te itt a lovon ne gyekererezhessél, és erekedhessél.</l>
         </lg>
