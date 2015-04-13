@@ -15,7 +15,7 @@
                 based on the recurring stressed syllable pairs per line.
             </p>
             <metDecl xml:id='stressQuant' type='met'>
-                <pattern><ex>SU*\b\s|\S*){2,4}</pattern> 
+                <pattern>(SU*\b\s|\S*){2,4}</pattern> 
                     <!-- 
                         Regex explained: 
                             1.  One stressed syllabe followed by any number of
